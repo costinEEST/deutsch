@@ -69,7 +69,7 @@ Think of it as a REST API for your local Anki collection.
 
 1. Open Anki
 2. Go to `Tools → Add-ons → Get Add-ons…`
-3. Enter the code **`2055492159`** and click OK
+3. Enter the code [**`2055492159`**](https://github.com/ankicommunity/anki-desktop-addon-connect#installation) and click OK
 4. Restart Anki
 
 You can verify it's running by opening [http://localhost:8765](http://localhost:8765) in your browser — you should see the text `AnkiConnect`.
