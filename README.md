@@ -4,6 +4,9 @@
 Editura Steaua Nordului, Constanța, 2012 (Ed. a 6-a)  
 ISBN 978-606-511-372-5
 
+**Resurse:**
+- [Ediția 2005 (PDF pe Scribd)](https://www.scribd.com/document/397842541/Corina-Dragomir-Germana-Rapida-2005-Steaua-Nordului-pdf)
+
 ---
 
 ## Cuprins
