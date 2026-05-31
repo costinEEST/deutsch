@@ -39,6 +39,70 @@ Orice resursă nouă adăugată trebuie menționată și în `README.md`, în ta
 - Cache audio în `.audio_cache/` (gitignored)
 - Output `germana_rapida.apkg` (gitignored)
 
+## Formatarea conținutului de lecții
+
+Când utilizatorul adaugă conținut brut dintr-o lecție (text copiat, transcriere, note), formatează-l urmând acest pattern stabilit în lecția 10 din `calin-ardelean-profu-de-germana.md`.
+
+### Structura unei lecții
+
+```markdown
+### Lecția N — Titlu subiect
+
+📺 [Vezi pe YouTube](URL)
+
+**Salut / expresie cheie** — traducere
+
+---
+
+#### Secțiunea principală — concept gramatical
+
+Scurtă explicație a conceptului (1-3 propoziții).
+
+| Tabel rezumat dacă există mai multe variante |
+|---|---|
+| **termen** | sens |
+
+**Subsecțiune — verb sau concept specific**
+
+| Germană | Română |
+|---|---|
+| Exemplu german. | Traducere română. |
+
+---
+
+#### Exerciții — grupate pe verb/concept
+
+**verb/concept — exerciții**
+
+| Germană | Română |
+|---|---|
+| Propoziție. | Traducere. |
+
+---
+
+**Danke** — Mulțumesc
+```
+
+### Reguli de formatare
+
+- **Nu folosi blocuri de cod indentat** (`    text`) pentru propoziții — folosește tabele
+- **Grupează exemplele pe verb sau concept**, nu le lăsa amestecate într-o listă plată
+- **Adaugă un tabel rezumat** când există mai multe variante ale unui concept (ex: toate verbele modale)
+- **Separă cu `---`** secțiunile principale (teorie vs. exerciții)
+- **Bifează lecția** în lista playlist-ului după ce conținutul e adăugat (`- [x]`)
+- **Link-ul YouTube** al lecției apare imediat sub titlul lecției
+- Titlul lecției folosește anchor intern pentru a putea fi referit din lista de checkboxuri
+
+### Checklist playlist
+
+Fiecare playlist are o listă de checkboxuri deasupra conținutului lecțiilor. Lecțiile cu conținut adăugat sunt bifate (`[x]`) și au un link anchor către secțiunea lor.
+
+Exemplu:
+```markdown
+- [ ] Lecția 1
+- [x] [Lecția 10 — Verbe modale](#lecția-10--verbe-modale)
+```
+
 ## Limbă
 
 Documentația și fișierele `.md` sunt în **română**. Codul Python poate avea comentarii în engleză sau română.
