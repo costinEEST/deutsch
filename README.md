@@ -1,129 +1,112 @@
-# Germana Rapidă — Anki Flashcard Generator
+# Resurse pentru învățat germana
 
-Study aid for the book **[Germana Rapidă by Corina Dragomir](./GERMANA_RAPIDA.md)** — a practical German course for Romanian speakers (Editura Steaua Nordului, 2012).
-
-The script extracts vocabulary, pronunciation rules, diphthongs, consonant patterns, and accent rules from the book and packages them as an Anki deck. Alphabet cards include native audio pronunciation.
+Colecție de cursuri, cărți și unelte pentru a învăța limba germană — cu focus pe vorbitori de română.
 
 ---
 
-## Requirements
+## Cursuri video
 
-- [uv](https://docs.astral.sh/uv/) — Python package manager (handles all dependencies automatically)
-- [Anki](https://apps.ankiweb.net/) — to study the generated deck
+| Resursă | Nivel | Limbă | Descriere |
+|---|---|---|---|
+| [Călin Ardelean — Profu' de Germană](./calin-ardelean-profu-de-germana.md) | A1–B1+ | Română | Cursuri gratuite pe YouTube, structurate progresiv |
 
-Install `uv` if you don't have it:
+---
+
+## Cărți
+
+| Resursă | Nivel | Limbă | Descriere |
+|---|---|---|---|
+| [Germana Rapidă — Corina Dragomir](./GERMANA_RAPIDA.md) | A1–A2 | Română | Curs practic, 34 de lecții, gramatică, vocabular |
+
+---
+
+## Unelte
+
+### Generator de carduri Anki — Germana Rapidă
+
+Script Python care extrage vocabularul, regulile de pronunție și accentul din cartea **Germana Rapidă** și generează un deck Anki cu 260 de carduri. Cardurile pentru alfabet includ audio nativ.
+
+**Cerințe:**
+
+- [uv](https://docs.astral.sh/uv/) — manager de pachete Python
+- [Anki](https://apps.ankiweb.net/) — pentru studiat deck-ul generat
+
+Instalează `uv` dacă nu îl ai:
 
 ```bash
 # via pip
 pip install uv
 
-# or via Homebrew
+# sau via Homebrew
 brew install uv
 ```
 
----
+**Opțiunea 1 — Export în fișier, import manual**
 
-## Two ways to get cards into Anki
-
-### Option 1 — Export to file, import manually
-
-Use this when Anki is closed, or as a one-time setup.
+Folosește când Anki este închis sau ca setup inițial.
 
 ```bash
 uv run create_anki_deck.py
 ```
 
-This generates `germana_rapida.apkg` in the current directory. Then in Anki:
+Generează `germana_rapida.apkg` în directorul curent. Apoi în Anki: `File → Import → germana_rapida.apkg`.
 
-1. `File → Import`
-2. Select `germana_rapida.apkg`
-3. The deck **"Germana Rapidă :: Corina Dragomir"** appears in your collection
+Re-importul după regenerare este sigur — GUID-urile cardurilor sunt deterministe, deci Anki actualizează cardurile existente fără să creeze duplicate. Progresul de studiu se păstrează.
 
-Re-importing after regenerating is safe — card GUIDs are deterministic, so Anki updates existing cards instead of creating duplicates. Your study progress and review history are preserved.
+**Opțiunea 2 — Push direct în Anki via AnkiConnect**
 
----
-
-### Option 2 — Push directly to Anki via AnkiConnect
-
-Use this for day-to-day updates. No manual import step needed.
+Folosește pentru actualizări zilnice, fără import manual.
 
 ```bash
 uv run create_anki_deck.py --push
 ```
 
-This connects to a running Anki instance, uploads the audio files, and adds or updates all 260 cards in place. Study progress is fully preserved.
+Cerințe: Anki deschis + add-on-ul AnkiConnect instalat.
 
-**Requirements for `--push`:**
-- Anki must be open
-- The AnkiConnect add-on must be installed (see below)
+**Instalare AnkiConnect:**
 
----
+1. Deschide Anki
+2. `Tools → Add-ons → Get Add-ons…`
+3. Introdu codul [**`2055492159`**](https://github.com/ankicommunity/anki-desktop-addon-connect#installation) și click OK
+4. Repornește Anki
 
-## What is AnkiConnect?
+Verifică că rulează accesând [http://localhost:8765](http://localhost:8765) — ar trebui să apară textul `AnkiConnect`.
 
-AnkiConnect is an Anki add-on that starts a local HTTP server (on port 8765) whenever Anki is running. External tools — like this script — can talk to it to create decks, add or update cards, and upload media files, all without touching the Anki UI.
+> **macOS:** App Nap poate suspenda AnkiConnect când Anki nu e în prim-plan. Dezactivează-l o singură dată:
+> ```bash
+> defaults write net.ankiweb.dtop NSAppSleepDisabled -bool true
+> defaults write net.ichi2.anki NSAppSleepDisabled -bool true
+> defaults write org.qt-project.Qt.QtWebEngineCore NSAppSleepDisabled -bool true
+> ```
+> Apoi repornește Anki.
 
-Think of it as a REST API for your local Anki collection.
+**Ce conține deck-ul:**
 
-### Installing AnkiConnect
+260 de carduri în 8 categorii:
 
-1. Open Anki
-2. Go to `Tools → Add-ons → Get Add-ons…`
-3. Enter the code [**`2055492159`**](https://github.com/ankicommunity/anki-desktop-addon-connect#installation) and click OK
-4. Restart Anki
-
-You can verify it's running by opening [http://localhost:8765](http://localhost:8765) in your browser — you should see the text `AnkiConnect`.
-
-### Extra step for macOS
-
-macOS has a feature called App Nap that suspends background apps, which breaks AnkiConnect when Anki is not the focused window. Disable it for Anki by running these three commands once in Terminal:
-
-```bash
-defaults write net.ankiweb.dtop NSAppSleepDisabled -bool true
-defaults write net.ichi2.anki NSAppSleepDisabled -bool true
-defaults write org.qt-project.Qt.QtWebEngineCore NSAppSleepDisabled -bool true
-```
-
-Then restart Anki.
-
----
-
-## What's in the deck
-
-260 cards across 8 categories:
-
-| Category | Cards | Description |
+| Categorie | Carduri | Descriere |
 |---|---|---|
-| Alfabet | 29 | All 26 letters + ä, ö, ü with IPA pronunciation and audio |
-| Pronunție — Vocale | 16 | Vowel length and quality rules with examples |
-| Pronunție — Diftongi | 18 | Diphthong patterns: ei/ai, au, eu/äu |
-| Pronunție — Consoane | 26 | Consonant rules including ch, sch, st, sp, z, w |
-| Pronunție — Consoane duble | 10 | Double consonant behaviour |
-| Accent | 9 | Stress rules for compounds, suffixes, separable verbs |
-| Vocabular | 76 | German → Romanian (with grammatical gender) |
-| Vocabular — Invers | 76 | Romanian → German |
+| Alfabet | 29 | Toate cele 26 de litere + ä, ö, ü cu pronunție IPA și audio |
+| Pronunție — Vocale | 16 | Reguli de lungime și calitate a vocalelor cu exemple |
+| Pronunție — Diftongi | 18 | Tipare de diftongi: ei/ai, au, eu/äu |
+| Pronunție — Consoane | 26 | Reguli pentru ch, sch, st, sp, z, w |
+| Pronunție — Consoane duble | 10 | Comportamentul consoanelor duble |
+| Accent | 9 | Reguli de accent pentru compuse, sufixe, verbe separabile |
+| Vocabular | 76 | Germană → Română (cu gen gramatical) |
+| Vocabular — Invers | 76 | Română → Germană |
 
-Audio pronunciation for the alphabet is sourced from [German Cheat Sheet](https://tsimpliarakis.github.io/German-Cheat-Sheet/alphabet) by Michail Tsimpliarakis, licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+Audio pentru alfabet provine din [German Cheat Sheet](https://tsimpliarakis.github.io/German-Cheat-Sheet/alphabet) de Michail Tsimpliarakis, licențiat sub [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).
 
 ---
 
-## Files
+## Structura repository-ului
 
 ```
 .
-├── create_anki_deck.py   # the generator script
-├── germana_rapida.apkg   # generated Anki deck (after running the script)
-├── GERMANA_RAPIDA.md     # book content: alphabet, pronunciation, accent rules
-└── README.md             # this file
+├── README.md                              # acest fișier
+├── calin-ardelean-profu-de-germana.md     # lecții YouTube — Profu' de Germană
+├── GERMANA_RAPIDA.md                      # conținut carte: alfabet, pronunție, accent
+└── create_anki_deck.py                    # script generator deck Anki
 ```
 
-The `.audio_cache/` directory is created on first run to store downloaded `.m4a` files locally. Subsequent runs reuse the cache. Both `germana_rapida.apkg` and `.audio_cache/` are gitignored.
-
----
-
-## Source material
-
-**Germana Rapidă** — Corina Dragomir  
-Editura Steaua Nordului, Constanța, 2012 (Ed. a 6-a)  
-ISBN 978-606-511-372-5  
-[Ediția 2005 pe Scribd](https://www.scribd.com/document/397842541/Corina-Dragomir-Germana-Rapida-2005-Steaua-Nordului-pdf)
+Directorul `.audio_cache/` se creează la prima rulare a scriptului pentru a stoca fișierele `.m4a` local. Rulările ulterioare refolosesc cache-ul. Atât `germana_rapida.apkg` cât și `.audio_cache/` sunt în `.gitignore`.
