@@ -16,7 +16,7 @@ Colecție de cursuri, cărți și unelte pentru a învăța limba germană — c
 
 | Resursă | Nivel | Limbă | Descriere |
 |---|---|---|---|
-| [Germana Rapidă — Corina Dragomir](./GERMANA_RAPIDA.md) | A1–A2 | Română | Curs practic, 34 de lecții, gramatică, vocabular |
+| [Germana Rapidă — Corina Dragomir](./corina-dragomir-germana-rapida.md) | A1–A2 | Română | Curs practic, 34 de lecții, gramatică, vocabular |
 
 ---
 
@@ -105,7 +105,7 @@ Audio pentru alfabet provine din [German Cheat Sheet](https://tsimpliarakis.gith
 .
 ├── README.md                              # acest fișier
 ├── calin-ardelean-profu-de-germana.md     # lecții YouTube — Profu' de Germană
-├── GERMANA_RAPIDA.md                      # conținut carte: alfabet, pronunție, accent
+├── corina-dragomir-germana-rapida.md     # conținut carte: alfabet, pronunție, accent, lecții
 └── create_anki_deck.py                    # script generator deck Anki
 ```
 
