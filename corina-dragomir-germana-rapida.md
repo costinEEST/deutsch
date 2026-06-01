@@ -11,18 +11,46 @@ ISBN 978-606-511-372-5
 
 ## Cuprins
 
-- [Introducere](#introducere)
-- [Alfabetul](#alfabetul)
-- [Pronunția](#pronunția)
-  - [Vocalele](#vocalele)
-  - [Diftongii](#diftongii)
-  - [Consoanele](#consoanele)
-  - [Consoane duble](#consoane-duble)
-  - [Diftongii -ei, -ai](#diftongii--ei--ai)
-  - [Sunetul εf scris diferit](#sunetul-εf-scris-diferit)
-  - [Diftongii -eu, -äu](#diftongii--eu--äu)
-- [Accentul](#accentul)
-- [Lecția 1 — Begrüßung / Formule de salut](#lecția-1--begrüßung--formule-de-salut)
+| Capitol | Titlu (DE / RO) | Pagina |
+|---|---|---|
+| | [Alfabetul](#alfabetul) | 7 |
+| | [Pronunția](#pronunția) | 8 |
+| | [Accentul](#accentul) | — |
+| Lecția 1 | [Begrüßung / Formule de salut](#lecția-1--begrüßung--formule-de-salut) | 16 |
+| Lecția 2 | Vorstellung / Prezentarea | 19 |
+| Lecția 3 | Zahlwörter / Numeralele | 24 |
+| Lecția 4 | Die Zeit / Timpul | 27 |
+| Lecția 5 | Datum / Monate — Data / Lunile | 34 |
+| Lecția 6 | Alter / Vârsta | 39 |
+| Lecția 7 | Das Wetter / Vremea | 44 |
+| Lecția 8 | Die Familie / Familia | 51 |
+| Lecția 9 | Wohnung / Locuința | 58 |
+| Lecția 10 | Die Post / Poșta | 65 |
+| Lecția 11 | Berufe / Meserii | 70 |
+| Lecția 12 | Der Brief / Scrisoarea | 76 |
+| Lecția 13 | Das Essen / Mâncarea | 81 |
+| Lecția 14 | Das Restaurant / Restaurantul | 87 |
+| Lecția 15 | Reisen mit dem Bahn / Călătoria cu trenul | 92 |
+| Lecția 16 | Mein Wagen ist kaputt / Mașina mea este stricată | 97 |
+| Lecția 17 | Orientierung in der Stadt / Orientarea în oraș | 102 |
+| Lecția 18 | Reisen mit dem Flugzeug / Călătoria cu avionul | 107 |
+| Lecția 19 | Reisen mit dem Schiff / Călătoria cu vaporul | 113 |
+| Lecția 20 | Pass- und Zollkontrolle / Controlul pașaportului și vama | 117 |
+| Lecția 21 | Im Hotel / La hotel | 122 |
+| Lecția 22 | Wechselstube / Schimbul valutar | 129 |
+| Lecția 23 | Einkäufe / Cumpărături | 133 |
+| Lecția 24 | Die Stadtrundfahrt / Turul orașului | 138 |
+| Lecția 25 | Der Urlaub / Concediul | 144 |
+| Lecția 26 | Das Studium / Studiul | 149 |
+| Lecția 27 | Stellenangebote / Oferte de muncă | 156 |
+| Lecția 28 | Sport / Sportul | 161 |
+| Lecția 29 | Ins Theater / Kino — La teatru / cinema | 165 |
+| Lecția 30 | Die Buchhandlung / Librăria | 169 |
+| Lecția 31 | Beim Arzt / La doctor | 172 |
+| Lecția 32 | In der Apotheke / La farmacie | 180 |
+| Lecția 33 | Beim Zahnarzt / La stomatolog | 184 |
+| Lecția 34 | Gratulieren / A felicita | 187 |
+| | Compendiu de gramatică | 193 |
 
 ---
 
